@@ -1,4 +1,4 @@
-<div class="tariff-list">
+<div class="tariff-list" *ngIf="tariffs?.length; else noTariff">
   <div class="tariff-card" *ngFor="let tariff of tariffs">
     <div class="tariff-card__content">
        {{ tariff.id }}.
@@ -24,3 +24,8 @@
     </div>
   </div>
 </div>
+
+
+<ng-template #noTariff>
+  <p class="no-tariff-message"> No tariff found</p>
+</ng-template>

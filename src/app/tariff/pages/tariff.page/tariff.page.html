@@ -1,3 +1,12 @@
+<div *ngIf="filteredTariffs !== null && !loadingTariff; else noData">
+  <app-tariff-filter> </app-tariff-filter>
+  <app-tariff-list [tariffs]="filteredTariffs"> </app-tariff-list>
+</div>
 
-<app-tariff-list>
-</app-tariff-list>
+<div class="spinner" *ngIf="loadingTariff">
+  <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+</div>
+
+<ng-template #noData>
+  <p class="error-message">{{errorMessage}}</p>
+</ng-template>

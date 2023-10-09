@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { catchError, Observable } from 'rxjs';
 
 import { Tariff } from '../models/tariff.interface';
 
@@ -9,10 +9,15 @@ import { Tariff } from '../models/tariff.interface';
 })
 export class TariffService {
   private apiUrl = 'https://my-json-server.typicode.com/Halemo91/internet-tariff-app';
+  errorMessage = "failed to load tariffs, please try again later!";
 
   constructor(private http: HttpClient) { }
 
   getTariffs(): Observable<Tariff[]> {
-    return this.http.get<Tariff[]>(`${this.apiUrl}/tariffs`);
+    return this.http.get<Tariff[]>(`${this.apiUrl}/tariffs`).pipe(
+      catchError(() => {
+        throw new Error(this.errorMessage);
+      }),
+    );
   }
 }
