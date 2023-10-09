@@ -1,5 +1,5 @@
-<div class="tariff-list" *ngIf="tariffs?.length; else noTariff">
-  <div class="tariff-card" *ngFor="let tariff of tariffs">
+<div class="tariff-list" *ngIf="filteredTariffs?.length; else noTariff">
+  <div class="tariff-card" *ngFor="let tariff of filteredTariffs">
     <div class="tariff-card__content">
        {{ tariff.id }}.
     </div>

@@ -1,6 +1,6 @@
 <div *ngIf="filteredTariffs !== null && !loadingTariff; else noData">
-  <app-tariff-filter> </app-tariff-filter>
-  <app-tariff-list [tariffs]="filteredTariffs"> </app-tariff-list>
+  <app-tariff-filter (clearFilter)="restTariff()" > </app-tariff-filter>
+  <app-tariff-list [filteredTariffs]="filteredTariffs"> </app-tariff-list>
 </div>
 
 <div class="spinner" *ngIf="loadingTariff">

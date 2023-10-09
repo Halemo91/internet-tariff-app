@@ -11,6 +11,7 @@ import { Tariff } from './../../models/tariff.interface';
 })
 export class TariffPage implements OnInit {
   filteredTariffs: Tariff[] | null = [];
+  originalTariffs!: Tariff[];
   errorMessage: string = '';
   loadingTariff!: boolean;
 
@@ -19,6 +20,10 @@ export class TariffPage implements OnInit {
   ngOnInit() {
     this.loadingTariff = true;
     this.getTariff();
+  }
+
+  restTariff() {
+    this.filteredTariffs = this.originalTariffs;
   }
 
   private getTariff() {
@@ -32,8 +37,12 @@ export class TariffPage implements OnInit {
         })
       )
       .subscribe((tariffs) => {
-        this.filteredTariffs = tariffs;
         this.loadingTariff = false;
+        this.filteredTariffs = tariffs;
+
+        if (tariffs) {
+          this.originalTariffs = [...tariffs];
+        }
       });
   }
 }

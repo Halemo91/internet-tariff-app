@@ -1,1 +1,12 @@
-<p>tariff-filter works!</p>
+<div class="filter-container">
+  <label for="sortCriteria">Sort By:</label>
+  <select id="sortCriteria" [ngModel]="selectedSortFieldName" (ngModelChange)="applyFilter($event)">
+    <option *ngFor="let option of sortOptions" [value]="option.value">{{ option.label }}</option>
+  </select>
+  <button class="sort-button" (click)="toggleSortDirection()" *ngIf="selectedSortFieldName">
+    <span [ngClass]="{'arrow-up': selectedSortDirection === SortDirection.ASC, 'arrow-down': selectedSortDirection === SortDirection.DESC}"></span>
+    <span>{{ selectedSortDirection === SortDirection.ASC ? 'ASC' : 'DESC' }}</span>
+
+  </button>
+  <button *ngIf="selectedSortFieldName" class="clear-filter-button" (click)="clearFilters()">Clear Filter</button>
+</div>

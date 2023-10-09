@@ -1,45 +1,56 @@
 {
-   "tariffs": [
-     {
-       "id": 1,
-       "name": "Tariff 1",
-       "downloadSpeed": 12,
-       "uploadSpeed": 5,
-       "benefits": ["Tariff Benefit 1", "Tariff Benefit 2"],
-       "price": 10
-     },
-     {
-       "id": 2,
-       "name": "Tariff 2",
-       "downloadSpeed": 25,
-       "uploadSpeed": 10,
-       "benefits": ["Tariff Benefit 1"],
-       "price": 20
-     },
-     {
-       "id": 3,
-       "name": "Tariff 3",
-       "downloadSpeed": 50,
-       "uploadSpeed": 20,
-       "benefits": ["Tariff Benefit 1", "Tariff Benefit 2","Tariff Benefit 3", "Tariff Benefit 4"],
-       "price": 30
-     },
-     {
+  "tariffs": [
+    {
+      "id": 1,
+      "name": "Tariff 1",
+      "downloadSpeed": 12,
+      "uploadSpeed": 5,
+      "benefits": ["Tariff Benefit 1", "Tariff Benefit 2"],
+      "price": 10
+    },
+    {
+      "id": 2,
+      "name": "Tariff 2",
+      "downloadSpeed": 25,
+      "uploadSpeed": 16,
+      "benefits": ["Tariff Benefit 1"],
+      "price": 20.5
+    },
+    {
+      "id": 3,
+      "name": "Tariff 3",
+      "downloadSpeed": 200,
+      "uploadSpeed": 50,
+      "benefits": [
+        "Tariff Benefit 1",
+        "Tariff Benefit 2",
+        "Tariff Benefit 3",
+        "Tariff Benefit 4",
+        "Tariff Benefit 5"
+      ],
+      "price": 50
+    },
+
+    {
       "id": 4,
       "name": "Tariff 4",
       "downloadSpeed": 120,
-      "uploadSpeed": 40,
+      "uploadSpeed": 15,
       "benefits": ["Tariff Benefit 1", "Tariff Benefit 2"],
       "price": 40
     },
     {
       "id": 5,
       "name": "Tariff 5",
-      "downloadSpeed": 200,
-      "uploadSpeed": 50,
-      "benefits": ["Tariff Benefit 1", "Tariff Benefit 2","Tariff Benefit 3", "Tariff Benefit 4", "Tariff Benefit 5"],
-      "price": 50
+      "downloadSpeed": 50,
+      "uploadSpeed": 20,
+      "benefits": [
+        "Tariff Benefit 1",
+        "Tariff Benefit 2",
+        "Tariff Benefit 3",
+        "Tariff Benefit 4"
+      ],
+      "price": 9.9
     }
-   ]
- }
- 
+  ]
+}
