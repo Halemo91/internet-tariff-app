@@ -6,10 +6,32 @@
     <div class="tariff-card__content">
       {{ tariff.name }}
     </div>
-    <div class="tariff-card__content">
-      <strong class="tariff-card__content-title">Download Speed:</strong> {{ tariff.downloadSpeed }} Mbit/s
-      <br>
-      <strong class="tariff-card__content-title">Upload Speed:</strong> {{ tariff.uploadSpeed }} Mbit/s
+    <div class="tariff-card__content speed">
+      <div>
+        <span>Download </span> 
+        <div class="download">
+          <span class="arrow">   
+            <mat-icon>
+              {{ 'arrow_downward' }}
+            </mat-icon>
+         </span>
+         <span class="tariff-speed"> {{ tariff.downloadSpeed }} Mbit/s</span>
+        </div>
+      </div>
+
+      <div>
+        <span>Upload </span>  
+        <div class="upload">
+          <span class="arrow">   
+            <mat-icon>
+              {{ 'arrow_upward' }}
+            </mat-icon>
+         </span>
+          <span class="tariff-speed"> {{ tariff.uploadSpeed }} Mbit/s</span>
+        </div>
+      </div>
+  
+
     </div>
     <div class="tariff-card__content benefits">
       <strong class="tariff-card__content-title">Benefits:</strong>
@@ -19,7 +41,7 @@
     </div>
     <div class="tariff-card__content">
       <strong class="tariff-card__content-title">Price:</strong> {{ tariff.price }} €
-      <br>
+    
       <button class="tariff-card__button">To tariff > </button>
     </div>
   </div>

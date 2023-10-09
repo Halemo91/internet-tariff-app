@@ -4,6 +4,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { TariffPage} from './tariff.page';
+import { HttpClientXsrfModule } from '@angular/common/http';
 
 describe('TariffPage', () => {
   let component: TariffPage;
@@ -11,7 +12,8 @@ describe('TariffPage', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TariffPage ]
+      declarations: [ TariffPage ],
+      imports:[HttpClientXsrfModule]
     })
     .compileComponents();
   }));

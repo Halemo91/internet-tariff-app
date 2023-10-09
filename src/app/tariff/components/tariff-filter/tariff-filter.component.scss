@@ -39,19 +39,17 @@ select {
   border: none;
   cursor: pointer;
   outline: none;
-  font-size: 20px;
   color: #007bff; 
   transition: transform 0.2s ease;
+  font-size: 14px;
+
+  .direction{
+    position: relative;
+    bottom: 4px;
+  }
+
 
   &:hover {
     transform: scale(1.2); 
-  }
-
-  .arrow-up::before {
-    content: '\25B2'; /* Up arrow character */
-  }
-
-  .arrow-down::before {
-    content: '\25BC'; /* Down arrow character */
   }
 }

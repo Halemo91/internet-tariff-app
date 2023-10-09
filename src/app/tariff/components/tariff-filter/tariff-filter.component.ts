@@ -1,4 +1,3 @@
-import { Tariff } from './../../models/tariff.interface';
 import { Component , EventEmitter, Output } from '@angular/core';
 
 import { SortCriteria, SortDirection, SortOptions } from '../../models/tariff-sort';
@@ -24,7 +23,7 @@ export class TariffFilterComponent {
 
   constructor(private tariffFilterService: TariffFilterService) {}
 
-  applyFilter(sortFieldName: string | null) {
+  onSortFieldNameChange(sortFieldName: string | null) {
     this.selectedSortFieldName = sortFieldName;
     this.sortCriteria.sortFieldName = this.selectedSortFieldName ;
     this.tariffFilterService.setSelectedSortCriteria(this.sortCriteria);
