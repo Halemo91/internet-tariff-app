@@ -1,0 +1,84 @@
+.tariff-list {
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   padding-left: 24px;
+   padding-right: 24px;
+ 
+   .tariff-card {
+     display: flex;
+     justify-content: space-between;
+     align-items: flex-start;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     padding: 10px;
+     margin: 10px;
+     width: 100%; 
+  
+       
+         /* Responsive styles for desktop screens */
+         @media (min-width: 992px) {
+            width: 100%;
+         }
+
+         /* Responsive styles for tablet screens */
+         @media (max-width: 991px) {
+            width: calc(80% - 20px);
+            .benefits {
+               display: none;
+            }
+         
+         }
+
+         /* Responsive styles for mobile screens */
+         @media (max-width: 767px) {
+            width: 100%;
+            .benefits {
+               display: none;
+            }
+            
+         }
+
+     transition: transform 0.2s ease-in-out;
+     cursor: pointer;
+ 
+     &:hover {
+       transform: scale(1.05);
+       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+     }
+ 
+     .tariff-card__content {
+       padding: 5px;
+ 
+       strong {
+         font-weight: bold;
+       }
+ 
+       button {
+         background-color: #007bff;
+         color: #fff;
+         border: none;
+         padding: 5px 10px;
+         cursor: pointer;
+         margin-top: 5px;
+         display: block;
+ 
+         &:hover {
+           background-color: #0056b3;
+         }
+       }
+     }
+ 
+     ul {
+       margin: 0;
+       padding: 0;
+       list-style-type: initial;
+ 
+       li {
+         margin-bottom: 5px;
+       }
+     }
+   }
+ }
+ 

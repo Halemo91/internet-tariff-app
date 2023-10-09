@@ -1,3 +1,26 @@
-<p>
-  tariff-list works!
-</p>
+<div class="tariff-list">
+  <div class="tariff-card" *ngFor="let tariff of tariffs">
+    <div class="tariff-card__content">
+       {{ tariff.id }}.
+    </div>
+    <div class="tariff-card__content">
+      {{ tariff.name }}
+    </div>
+    <div class="tariff-card__content">
+      <strong class="tariff-card__content-title">Download Speed:</strong> {{ tariff.downloadSpeed }} Mbit/s
+      <br>
+      <strong class="tariff-card__content-title">Upload Speed:</strong> {{ tariff.uploadSpeed }} Mbit/s
+    </div>
+    <div class="tariff-card__content benefits">
+      <strong class="tariff-card__content-title">Benefits:</strong>
+      <ul>
+        <li *ngFor="let benefit of tariff.benefits">{{ benefit }}</li>
+      </ul>
+    </div>
+    <div class="tariff-card__content">
+      <strong class="tariff-card__content-title">Price:</strong> {{ tariff.price }} €
+      <br>
+      <button class="tariff-card__button">To tariff > </button>
+    </div>
+  </div>
+</div>
