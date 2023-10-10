@@ -1,10 +1,29 @@
 # InternetTariffApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.5.
+This is a simple web application built with Angular for viewing and sorting internet tariffs.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
+
+- Get tariff data from fake api server.
+- List tariff data.
+- Able to sort with specific filename.
+- Able to clear sorting.
+- Different views for different screen sizes.
+
+## Screenshoot
+
+![Image](app-screen-shoot.png)
+
+## Development
+
+Run `npm install` to create the node_modules foder, then run `npm start`  for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Fake API
+
+The tariff data is generated via my json server: https://my-json-server.typicode.com/Halemo91/internet-tariff-app/tariffs
+The db.json file contains the tariff object, which my json server reads.
 
 ## Code scaffolding
 
