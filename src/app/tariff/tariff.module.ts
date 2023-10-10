@@ -8,7 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
 
 
 import { TariffListComponent } from './components/tariff-list/tariff-list.component';
-import { TariffPage } from './pages/tariff.page/tariff.page';
+import { TariffPage } from './pages/tariff-page/tariff.page';
 import { TariffFilterComponent } from './components/tariff-filter/tariff-filter.component';
 
 @NgModule({

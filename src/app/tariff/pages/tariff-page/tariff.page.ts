@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { catchError, EMPTY, of } from 'rxjs';
+import { catchError, of } from 'rxjs';
 
 import { TariffService } from '../../services/tariff.service';
-import { Tariff } from './../../models/tariff.interface';
+import { Tariff } from '../../models/tariff.interface';
 
 @Component({
-  selector: 'app-tariff.page',
+  selector: 'app-tariff-page',
   templateUrl: './tariff.page.html',
   styleUrls: ['./tariff.page.scss'],
 })
