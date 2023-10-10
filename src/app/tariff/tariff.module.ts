@@ -1,4 +1,3 @@
-import { TariffFilterService } from './services/tariff-filter.service';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -10,7 +9,6 @@ import { MatIconModule } from '@angular/material/icon';
 
 import { TariffListComponent } from './components/tariff-list/tariff-list.component';
 import { TariffPage } from './pages/tariff.page/tariff.page';
-import { TariffService } from './services/tariff.service';
 import { TariffFilterComponent } from './components/tariff-filter/tariff-filter.component';
 
 @NgModule({
@@ -22,7 +20,6 @@ import { TariffFilterComponent } from './components/tariff-filter/tariff-filter.
     MatProgressSpinnerModule,
     MatIconModule
   ],
-  declarations: [TariffListComponent, TariffFilterComponent, TariffPage],
-  providers: [TariffService, TariffFilterService],
+  declarations: [TariffListComponent, TariffFilterComponent, TariffPage]
 })
 export class TariffModule {}

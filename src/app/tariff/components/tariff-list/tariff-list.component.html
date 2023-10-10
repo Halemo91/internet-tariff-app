@@ -6,7 +6,7 @@
     <div class="tariff-card__content">
       {{ tariff.name }}
     </div>
-    <div class="tariff-card__content speed">
+    <div class="tariff-card__content speed-desktop">
       <div>
         <span>Download </span> 
         <div class="download">
@@ -30,19 +30,32 @@
           <span class="tariff-speed"> {{ tariff.uploadSpeed }} Mbit/s</span>
         </div>
       </div>
-  
-
+    </div>
+    <div class="speed-mobile">
+      <div>
+        <div class="download">
+          <span class="arrow">   
+            <mat-icon>
+              {{ 'arrow_downward' }}
+            </mat-icon>
+         </span>
+         <span class="tariff-speed"> {{ tariff.downloadSpeed }} Mbit/s</span>
+        </div>
+      </div>
     </div>
     <div class="tariff-card__content benefits">
-      <strong class="tariff-card__content-title">Benefits:</strong>
       <ul>
-        <li *ngFor="let benefit of tariff.benefits">{{ benefit }}</li>
+        <li *ngFor="let benefit of tariff.benefits.slice(0, 3)">{{ benefit }}</li>
+        <span *ngIf="tariff.benefits.length > 3">...</span>
       </ul>
     </div>
-    <div class="tariff-card__content">
-      <strong class="tariff-card__content-title">Price:</strong> {{ tariff.price }} €
-    
-      <button class="tariff-card__button">To tariff > </button>
+    <div class="tariff-card__content price">
+      <strong >{{ tariff.price }} €</strong> 
+      <button class="tariff-card__button">
+      <span class="button-label">
+        To tariff 
+      </span>  >
+      </button>
     </div>
   </div>
 </div>
