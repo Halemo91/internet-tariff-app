@@ -1,85 +1,89 @@
 .tariff-list {
-   display: flex;
-   flex-direction: column;
-   flex-wrap: wrap;
-   justify-content: space-between;
-   padding: 0 24px 0 24px;
-   margin-right: 24px;
- 
-   .tariff-card {
-     display: flex;
-     justify-content: space-between;
-     align-items: flex-start;
-     border: 1px solid #ccc;
-     border-radius: 5px;
-     padding: 10px;
-     margin: 10px;
-     width: 100%; 
-     max-height: 200px;
-  
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 24px 0 24px;
+  margin-right: 24px;
+
+  .tariff-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+    max-height: 200px;
+
     /* Responsive styles for desktop screens */
     @media (min-width: 769px) {
-        width: 100%;
-        .speed-mobile {
-          display: none;
+      width: 100%;
+      .speed-mobile {
+        display: none;
       }
     }
 
     /* Responsive styles for tablet screens */
     @media (max-width: 768px) {
       width: 100%;
-        .benefits,  .speed-mobile {
-          display: none;
-        }
-    
+      .benefits,
+      .speed-mobile {
+        display: none;
+      }
     }
 
     /* Responsive styles for mobile screens */
     @media (max-width: 480px) {
-        width: 100%;
-        .benefits, .button-label, .speed-desktop , .tariff-card__content-title {
-          display: none!important;
-        }
-        .speed-mobile {
-          display: flex;
-          flex-direction: column;
-        }
+      width: 100%;
+      .benefits,
+      .button-label,
+      .speed-desktop,
+      .tariff-card__content-title {
+        display: none !important;
+      }
+      .speed-mobile {
+        display: flex;
+        flex-direction: column;
+      }
     }
 
-     transition: transform 0.2s ease-in-out;
-     cursor: pointer;
- 
-     &:hover {
-       transform: scale(1.05);
-       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-     }
- 
-     .tariff-card__content {
-        padding: 5px;
-  
-        strong {
-          font-weight: bold;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .tariff-card__content {
+      padding: 5px;
+
+      strong {
+        font-weight: bold;
+      }
+
+      button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        margin-top: 5px;
+        display: block;
+        width: 100%;
+
+        &:hover {
+          background-color: #0056b3;
         }
-  
-        button {
-          background-color: #007bff;
-          color: #fff;
-          border: none;
-          padding: 5px 10px;
-          cursor: pointer;
-          margin-top: 5px;
-          display: block;
-          width: 100%;
-  
-          &:hover {
-            background-color: #0056b3;
-          }
-        }
-     }
-     .speed-desktop {
+      }
+    }
+    .speed-desktop {
       display: flex;
       flex-direction: column;
-      .download, .upload {
+      .download,
+      .upload {
         display: flex;
         flex-direction: row;
         margin-bottom: 12px;
@@ -98,25 +102,24 @@
           border-bottom-right-radius: 50%;
         }
       }
-     }
+    }
 
-     .price {
+    .price {
       width: 15%;
-     }
- 
-     ul {
-       margin: 0;
-       padding: 0;
-       list-style-type: initial;
- 
-       li {
-         margin-bottom: 5px;
-       }
-     }
-   }
- }
+    }
 
- .no-tariff-message {
-   margin: 50px;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: initial;
+
+      li {
+        margin-bottom: 5px;
+      }
+    }
+  }
 }
- 
+
+.no-tariff-message {
+  margin: 50px;
+}

@@ -1,22 +1,21 @@
-/* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
+import {  ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TariffPage} from './tariff.page';
-import { HttpClientXsrfModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 describe('TariffPage', () => {
   let component: TariffPage;
   let fixture: ComponentFixture<TariffPage>;
 
-  beforeEach(async(() => {
+  beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [ TariffPage ],
-      imports:[HttpClientXsrfModule]
+      imports:[HttpClientModule, MatProgressSpinnerModule],
+      providers:[HttpClientModule]
     })
     .compileComponents();
-  }));
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TariffPage);

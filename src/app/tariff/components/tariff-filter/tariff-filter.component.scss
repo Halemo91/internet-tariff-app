@@ -1,10 +1,8 @@
-
 .filter-container {
   display: flex;
   align-items: center;
   gap: 10px;
   margin: 0px 0px 12px 34px;
-
 }
 
 select {
@@ -16,12 +14,12 @@ select {
   outline: none;
 
   &:focus {
-    border-color: #007bff; 
+    border-color: #007bff;
   }
 }
 
 .clear-filter-button {
-  background-color: #dc3545; 
+  background-color: #dc3545;
   color: white;
   border: none;
   border-radius: 4px;
@@ -31,27 +29,25 @@ select {
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: #c82333; 
+    background-color: #c82333;
   }
 }
-
 
 .sort-button {
   background: none;
   border: none;
   cursor: pointer;
   outline: none;
-  color: #007bff; 
+  color: #007bff;
   transition: transform 0.2s ease;
   font-size: 14px;
 
-  .direction{
+  .direction {
     position: relative;
     bottom: 4px;
   }
 
-
   &:hover {
-    transform: scale(1.2); 
+    transform: scale(1.2);
   }
 }
