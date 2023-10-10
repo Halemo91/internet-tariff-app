@@ -1,5 +1,5 @@
 <div *ngIf="filteredTariffs !== null && !loadingTariff; else noData">
-  <app-tariff-filter (clearFilter)="restTariff()" > </app-tariff-filter>
+  <app-tariff-filter (clearFilter)="restTariffList()" > </app-tariff-filter>
   <app-tariff-list [filteredTariffs]="filteredTariffs"> </app-tariff-list>
 </div>
 

@@ -22,7 +22,7 @@ export class TariffPage implements OnInit {
     this.getTariff();
   }
 
-  restTariff() {
+  restTariffList() {
     this.filteredTariffs = this.originalTariffs;
   }
 
